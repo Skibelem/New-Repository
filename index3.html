@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./style/output.css">
     <title>Document</title>
 </head>
-<body>
+<body class="overflow-hidden">
     <div class="bg-[#0B022F] w-[screen] hidden max-sm:block text-center py-5">
         <h2 class="text-[#F8FAFC] text-2xl font-bold">
             KIATKEA
@@ -30,16 +30,25 @@
                     </h2>
                 </div>
                 <div class="bg-[#e7dede] h-[500px] p-4 rounded-[8px] max-sm:h-[530px]">
-                    <form action="">
+                    <form action="" id="sign-in-form">
                         <div>
-                            <p>Email</p>
-                            <input type="email" placeholder="abcd@gmail.com" required   class="rounded-[8px] w-[100%] p-1 border-primary border-solid border-[1px] mb-[24px]">
+                            <label for="email">Email</label>
+                            <input type="email" placeholder="abcd@gmail.com" required  name="email" id="email" class="rounded-[8px] w-[100%] p-1 border-primary border-solid border-[1px] mb-[24px]">
 
-                            <p>Password</p>
-                            <input type="password" placeholder="*********" required     class="rounded-[8px] p-1 w-[100%] border-primary border-solid border-[1px] mb-[24px]">
+                            <label for="password">Password</label>
+                            <input  type="password" 
+                            id="password" 
+                            name="password" 
+                            autocomplete="new-password" 
+                            autofocus 
+                            required 
+                            minlength="8" 
+                            maxlength="128" 
+                            placeholder="Enter your password" 
+                            title="Password must be at least 8 characters" class="rounded-[8px] p-1 w-[100%] border-primary border-solid border-[1px] mb-[24px]">
                         </div>
                         <div class="mb-[24px]">
-                            <p class="bg-[#0B022F] w-[70%] h-fit rounded-[40px] text-[#F8FAFC] p-2 text-center m-auto">SignIn</p>
+                            <button class="bg-[#0B022F] w-[70%] h-fit rounded-[40px] text-[#F8FAFC] p-2 text-center ml-[90px] max-sm:ml-[40px]">SignIn</button>
                         </div>
                         <div class="flex justify-center items-center m-auto bg-[#F8FAFC] rounded-[40px] w-[80%] p-2 border-[1px] border-solid border-primary mb-[24px]">
                             <div>
@@ -50,20 +59,40 @@
                                     <path d="M41.7939 19.7462L41.7785 19.6667H40.25H23V27.3334H33.832C33.073 29.4771 31.694 31.3258 29.9153 32.6722C29.9163 32.6713 29.9173 32.6713 29.9182 32.6703L35.8503 37.6901C35.4305 38.0715 42.1667 33.0834 42.1667 23.5C42.1667 22.2149 42.0344 20.9604 41.7939 19.7462Z" fill="#1565C0"/>
                                 </svg>
                             </div>
-                            <p class="text-[#0B022F] ">Sign in with Google</p>
+                            <p class="text-[#0B022F] "><a href="index4.html">Sign in with Google</a></p>
                         </div>
                     </form>
                     <div class="text-center gap-[10px]">
                         <p class="text-[16px] mb-[34px]">
-                            Register an account
+                           <a href="index.html"> Register an account</a>
                         </p>
                         <p>
-                            Forgot Password
+                            <a href="index4.html">Forgot Password</a>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        const signUpForm = document.getElementById('sign-in-form');
+
+        signUpForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Validate form fields
+            if (!email || !password) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            // Redirect to login page
+             window.location.href = 'index4.html';
+        });
+    </script>
 </body>
 </html>

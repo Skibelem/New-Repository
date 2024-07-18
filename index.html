@@ -16,7 +16,7 @@
         </div>
         <div class="font-body max-sm:w-[] ml-[300px] max-sm:m-0">
             <div class="hidden max-sm:block w-[134.425px]t float-right p-3">
-                <img src="assets/4th Progress Bar (2).png" alt="" class=" mt-3">
+                <img src="assets/profile.png" alt="" class=" mt-3">
             </div>
             <div class=" ml-24 flex">
                 <div class="mt-3">
@@ -71,7 +71,16 @@
                                 <label for="password">
                                     Password
                                 </label>
-                                <input type="password" placeholder="*********" required class="rounded-[8px] self-stretch p-1 w-[100%] border-primary border-solid border-[1px] mb-[24px]" name="password" id="password"> 
+                                <input  type="password" 
+                                id="password" 
+                                name="password" 
+                                autocomplete="new-password" 
+                                autofocus 
+                                required 
+                                minlength="8" 
+                                maxlength="128"  
+                                placeholder="Enter your password" 
+                                title="Password must be at least 8 characters." class="rounded-[8px] self-stretch p-1 w-[100%] border-primary border-solid border-[1px] mb-[24px]"> 
                             </div>
                             <div>
                                 <label for="confirmpassword">

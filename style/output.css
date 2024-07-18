@@ -804,8 +804,28 @@ video {
   margin-top: 24px;
 }
 
+.mt-\[350px\] {
+  margin-top: 350px;
+}
+
 .mt-\[70px\] {
   margin-top: 70px;
+}
+
+.ml-\[50px\] {
+  margin-left: 50px;
+}
+
+.ml-\[70px\] {
+  margin-left: 70px;
+}
+
+.ml-\[90px\] {
+  margin-left: 90px;
+}
+
+.mt-\[200px\] {
+  margin-top: 200px;
 }
 
 .box-border {
@@ -1000,6 +1020,14 @@ video {
   width: 100%;
 }
 
+.w-screen {
+  width: 100vw;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
 .flex-shrink {
   flex-shrink: 1;
 }
@@ -1058,6 +1086,22 @@ video {
 
 .transform-none {
   transform: none;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
 }
 
 .cursor-pointer {
@@ -1862,6 +1906,10 @@ video {
   border-radius: 0.25rem;
 }
 
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
 .rounded-\[40px\] {
   border-radius: 40px;
 }
@@ -2295,6 +2343,11 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .text-\[16px\] {
@@ -2838,6 +2891,10 @@ video {
     margin: 0px;
   }
 
+  .max-sm\:m-auto {
+    margin: auto;
+  }
+
   .max-sm\:mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -2847,12 +2904,32 @@ video {
     margin-bottom: 34px;
   }
 
+  .max-sm\:mr-1 {
+    margin-right: 0.25rem;
+  }
+
   .max-sm\:mr-2 {
     margin-right: 0.5rem;
   }
 
   .max-sm\:mt-10 {
     margin-top: 2.5rem;
+  }
+
+  .max-sm\:ml-\[30px\] {
+    margin-left: 30px;
+  }
+
+  .max-sm\:ml-\[40px\] {
+    margin-left: 40px;
+  }
+
+  .max-sm\:ml-\[50px\] {
+    margin-left: 50px;
+  }
+
+  .max-sm\:ml-\[45px\] {
+    margin-left: 45px;
   }
 
   .max-sm\:block {
@@ -2871,8 +2948,8 @@ video {
     height: 100%;
   }
 
-  .max-sm\:w-\[70px\] {
-    width: 70px;
+  .max-sm\:w-\[60px\] {
+    width: 60px;
   }
 
   .max-sm\:w-\[\] {
@@ -2889,6 +2966,10 @@ video {
 
   .max-sm\:gap-0 {
     gap: 0px;
+  }
+
+  .max-sm\:gap-2 {
+    gap: 0.5rem;
   }
 
   .max-sm\:p-0 {
